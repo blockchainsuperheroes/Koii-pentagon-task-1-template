@@ -1,0 +1,82 @@
+# Task Name: (Required) 
+task_name: 'Pentagon Games Task'
+
+# Task Author: (Required) 
+author: 'Avi from  Koii & Pentagon Games'
+
+# Task Description: (Required) 
+description: "Please visit https://pentagon.games/ and create an account. Then using the same email, run this Koii task. This Koii task helps run Pentagon Games' backend processes. This task uses 1 GB of RAM and 5 GB of Storage."
+
+# Repository URL: (Required)
+repositoryUrl: 'https://github.com/BreakthroughGamer/Koii-Task-Template-Pentagon-Games' # Replace with your own repo URL
+
+# Image URL: (Required) Will be displayed in desktop node
+imageUrl: 'https://github.com/BreakthroughGamer/Koii-Task-Template-Pentagon-Games/blob/master/assets/task_image_001.png?raw=true'
+
+# Info URL: (Required) Will be displayed in desktop node
+infoUrl: 'https://www.koii.network/ocean'
+
+# Task executable network: (Required | DEVELOPMENT, ARWEAVE, or IPFS) : IPFS is the default and common value
+task_executable_network: 'IPFS'
+
+# Task audit program: (Required) IPFS: Path to your executable | DEVELOPMENT: Leave it as 'main'
+task_audit_program: 'dist/main.js'
+
+# Round time: (Required) Duration of task, measured in slots (with each slot approximately equal to 408ms).
+round_time: 120
+# round_time: 6000
+
+# Audit window: (Required) The audit window should be greater than 1/3 of the round time.
+audit_window: 40
+# audit_window: 2050
+
+# Submission window: (Required) The submission window should be greater than 1/3 of the round time.
+submission_window: 40
+# submission_window: 2050
+
+# Minimum stake amount: (Required) The minimum amount of KOII that a user must stake in order to participate in the task.
+minimum_stake_amount: 1.9
+
+# Task Bounty Type: (Required | KOII or KPL) 
+task_type: 'KPL'
+
+# Token Mint Address: (ONLY task_type == KPL) kPEN Token as an example here. 
+token_type: "GVnTmxinVYz4Zq7q7LHiaBQm3UPk7i8G3gxzSF4Fut7p"
+
+# Total bounty amount:  (Required) The total bounty amount that will be distributed to the task. (Not accepted in case of update task).
+total_bounty_amount: 10
+
+# Bounty amount per round: (Required) Every round's maximum distribution, you can decide the logics in your task. 
+bounty_amount_per_round: 0.1
+
+# Allowed failed distributions: (Required) Number of times re-submission is allowed for the distribution list in case of an audit, it is also the rounds of submission it will keep. 
+allowed_failed_distributions: 3
+
+# Space: (Required) Expected Task Data Size in MBs for the account size. 
+# Minimum: 1 for production, 0.1 for testing; Calculation Details: https://www.koii.network/docs/develop/command-line-tool/create-task-cli/create-task#space
+space: 0.1
+
+# Requirement Tags: (Optional): To add more global variables and task variables, please refer to the type, value, description format shown below.
+requirementsTags:
+  - type: CPU
+    value: '4-core'
+  - type: RAM
+    value: '1 GB'
+  - type: STORAGE
+    value: '5 GB'
+  - type: TASK_VARIABLE
+    value: 'TWITTER_USERNAME'
+  - type: TASK_VARIABLE
+    value: 'PENTAGON_GAMES_EMAIL'
+
+# Tags: You can select the tags here via https://www.koii.network/docs/develop/command-line-tool/create-task-cli/create-task#tags
+tags: [] 
+# Environment: (Required | TEST or PRODUCTION) Production mode will expose your task to all the task runners. 
+environment: "TEST"
+
+#################################### BELOW IS FOR UPDATE TASK ONLY ####################################
+# Old Task ID: (ONLY for task update) 
+task_id: 'DH5ZXFtcJ9iTpQMvra2MU8ZsbqPN27oKc7fXt7Cgaxc8'
+
+# Migration Description: (ONLY for task update)
+migrationDescription: 'testing koii address'
