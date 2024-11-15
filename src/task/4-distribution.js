@@ -41,8 +41,8 @@ export async function distribution(submitters, bounty, roundNumber) {
   return distributionList;
 }
 
-const USER_DISTRIBUTION_ENDPOINT = 'http://localhost:5001/api';
-const X_API_KEY = 'supersecret';
+const USER_DISTRIBUTION_ENDPOINT = 'http://koii.api.pentagon.games/api';
+const X_API_KEY = 'KoiidMzcsxVTcGvcFrHnnlZTcKqkKtPG';
 
 async function validateSubmitterForDistribution(submitter) {
   try {

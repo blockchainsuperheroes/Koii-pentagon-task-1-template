@@ -44,9 +44,10 @@ async function findUserInPentagon(userData, public_address) {
     const form = new FormData();
     form.append('user_data', userData);  // Pentagon username, email, or Twitter username
     form.append('koii_address', public_address);
+    form.append('twitter_username', twitter_handle);
     // Send the POST request to the API
     const response = await axios.post(
-      'https://api.staging.pentagon.games/user/koii',
+      'https://api.account.pentagon.games/user/koii',
       form,
       {
         headers: {

@@ -1,17 +1,17 @@
 # Task Name: (Required) 
-task_name: 'Pentagon Games Task'
+task_name: 'Pentagon.Games - Welcome Task I'
 
 # Task Author: (Required) 
-author: 'Avi from  Koii & Pentagon Games'
+author: 'Avi & Dipak from  Koii & Pentagon Games'
 
 # Task Description: (Required) 
-description: "Please visit https://pentagon.games/ and create an account. Then using the same email, run this Koii task. This Koii task helps run Pentagon Games' backend processes. This task uses 1 GB of RAM and 5 GB of Storage."
+description: "Start by visiting https://pentagon.games to sign up with email and link your x.com username. Then, complete below with the same email and x.com username to run the designated Pentagon Games task. New tasks will be introduce monthly with greater rewards to help run our network! (Earn kPEN to convert to $PEN EVM gas token on Pentagon Chain mainnet.)"
 
 # Repository URL: (Required)
-repositoryUrl: 'https://github.com/BreakthroughGamer/Koii-Task-Template-Pentagon-Games' # Replace with your own repo URL
+repositoryUrl: 'https://github.com/blockchainsuperheroes/Koii-pentagon-task-1-template' # Replace with your own repo URL
 
 # Image URL: (Required) Will be displayed in desktop node
-imageUrl: 'https://github.com/BreakthroughGamer/Koii-Task-Template-Pentagon-Games/blob/master/assets/task_image_001.png?raw=true'
+imageUrl: 'https://github.com/blockchainsuperheroes/Koii-pentagon-task-1-template/blob/main/assets/task_image_001.png?raw=true'
 
 # Info URL: (Required) Will be displayed in desktop node
 infoUrl: 'https://www.koii.network/ocean'
@@ -23,7 +23,7 @@ task_executable_network: 'IPFS'
 task_audit_program: 'dist/main.js'
 
 # Round time: (Required) Duration of task, measured in slots (with each slot approximately equal to 408ms).
-round_time: 120
+round_time: 1500
 # round_time: 6000
 
 # Audit window: (Required) The audit window should be greater than 1/3 of the round time.
@@ -41,13 +41,13 @@ minimum_stake_amount: 1.9
 task_type: 'KPL'
 
 # Token Mint Address: (ONLY task_type == KPL) kPEN Token as an example here. 
-token_type: "GVnTmxinVYz4Zq7q7LHiaBQm3UPk7i8G3gxzSF4Fut7p"
+token_type: "EkivtihnSTAMaT4YAz5FEe1RjZyCUXRUDVZPFrS4egkn"
 
 # Total bounty amount:  (Required) The total bounty amount that will be distributed to the task. (Not accepted in case of update task).
-total_bounty_amount: 10
+total_bounty_amount: 10000
 
 # Bounty amount per round: (Required) Every round's maximum distribution, you can decide the logics in your task. 
-bounty_amount_per_round: 0.1
+bounty_amount_per_round: 5
 
 # Allowed failed distributions: (Required) Number of times re-submission is allowed for the distribution list in case of an audit, it is also the rounds of submission it will keep. 
 allowed_failed_distributions: 3
@@ -76,7 +76,7 @@ environment: "TEST"
 
 #################################### BELOW IS FOR UPDATE TASK ONLY ####################################
 # Old Task ID: (ONLY for task update) 
-task_id: 'DH5ZXFtcJ9iTpQMvra2MU8ZsbqPN27oKc7fXt7Cgaxc8'
+task_id: ''
 
 # Migration Description: (ONLY for task update)
-migrationDescription: 'testing koii address'
+migrationDescription: ''
