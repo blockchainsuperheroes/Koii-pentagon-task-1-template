@@ -9,12 +9,13 @@ export async function task(roundNumber) {
     // Grab the task_variables
     let twitter_handle = process.env.TWITTER_HANDLE;
     let pentagon_games_email = process.env.PENTAGON_GAMES_EMAIL;
-
+    console.log("PENTAGON_GAMES_EMAIL" + pentagon_games_email);
+    console.log("twitter_handle" + twitter_handle);
     // Collect the main wallet account pubkey
     let koii_main_account_pubkey = await namespaceWrapper.getMainAccountPubkey();
 
     // Check to see if the email exists in Pentagon's system
-    let queryResponse = await findUserInPentagon(pentagon_games_email, koii_main_account_pubkey);
+    let queryResponse = await findUserInPentagon(pentagon_games_email, koii_main_account_pubkey,twitter_handle);
 
     // (Optional) console.log the information for verbose logs
     //console.log('TWITTER_HANDLE processed by task is:', twitter_handle);
@@ -38,7 +39,7 @@ export async function task(roundNumber) {
 
 }
 
-async function findUserInPentagon(userData, public_address) {
+async function findUserInPentagon(userData, public_address,twitter_handle) {
   try {
     // Create form data
     const form = new FormData();
@@ -57,7 +58,7 @@ async function findUserInPentagon(userData, public_address) {
     );
 
     console.log("RESPONSE DATA:", response.data)
-    return response.data || false;
+    return response?.data?.status || false;
   } catch (error) {
     console.error('Error in finding user:', error);
     return false;
