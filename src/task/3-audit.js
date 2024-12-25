@@ -18,32 +18,50 @@ export async function audit(submission, roundNumber) {
   const userData = await validateSubmitterForDistribution(publicKey,pentagon_games_email);
   async function validateSubmitterForDistribution(publicKey,pentagon_games_email) {
     try {
-      let data = JSON.stringify({
-        "koii_main_account_pubkey": publicKey || "0000000000000000000000000000000000000000",
-        "email": pentagon_games_email
-      });
-      console.log("data" + data);
-      let config = {
-        method: 'post',
-        maxBodyLength: Infinity,
-        url: 'https://koii.api.pentagon.games/api/validate-distribution',
-        headers: { 
-          'x-api-key': 'KoiidMzcsxVTcGvcFrHnnlZTcKqkKtPG', 
-          'Content-Type': 'application/json'
-        },
-        data : data
-      };
-      const response = await axios.request(config);
-      console.log("VALIDATE DISTRIBUTION RESPONSE DATA:", response.data?.data);
-      return response?.data?.data || false;
+      const url = `${USER_DISTRIBUTION_ENDPOINT}/user-by-mail/${pentagon_games_email}`;
+      const userResponse = await axios.get(url);
+    //user exists
+      if (userResponse.data.status === 200) {
+        vote = false;
+        return userResponse.data?.data || false;
+      } 
     } catch (error) {
-      console.error('Error validating submitter for distribution:', error);
+      if (error.response && error.response.status === 404) { // no user
+
+        try {
+          const data = JSON.stringify({
+          "koii_main_account_pubkey": publicKey || "0000000000000000000000000000000000000000",
+          "email": pentagon_games_email
+        });
+    
+        const config = {
+          method: 'post',
+          maxBodyLength: Infinity,
+          url: `${USER_DISTRIBUTION_ENDPOINT}/validate-distribution`,
+          headers: { 
+            'x-api-key': X_API_KEY, 
+            'Content-Type': 'application/json'
+          },
+          data: data
+        };
+        
+        const validateResponse = await axios.request(config);
+        vote = true;
+        return validateResponse?.data?.data || false;
+      } catch (error) {
+        console.error("Error validating submitter for distribution:", error);
+        return false;
+      }
+      }
+      console.error("Error getting user info:", error);
       return false;
     }
+    
   }
 
-  if (queryResponse != false) {
-    vote = true;
+  if (queryResponse == false) {
+    
+    vote = false;
   }
 
   return vote;
