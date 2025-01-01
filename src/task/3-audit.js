@@ -11,6 +11,11 @@ export async function audit(submission, roundNumber) {
   const queryResponse = submission;
 
   let vote = false;
+  if (queryResponse == false) {
+    
+    vote = false;
+    return vote;
+  }
   const publicKey =  await namespaceWrapper.getMainAccountPubkey();
   const pentagon_games_email = process.env.PENTAGON_GAMES_EMAIL;
   const USER_DISTRIBUTION_ENDPOINT = 'http://koii.api.pentagon.games/api';
