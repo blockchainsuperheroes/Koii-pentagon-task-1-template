@@ -11,7 +11,7 @@ description: "Start by visiting https://pentagon.games to sign up with email and
 repositoryUrl: 'https://github.com/blockchainsuperheroes/Koii-pentagon-task-1-template' # Replace with your own repo URL
 
 # Image URL: (Required) Will be displayed in desktop node
-imageUrl: 'https://raw.githubusercontent.com/blockchainsuperheroes/Koii-pentagon-task-1-template/refs/heads/main/assets/task_image_001.png?raw=true'
+imageUrl: 'https://raw.githubusercontent.com/blockchainsuperheroes/Koii-pentagon-task-1-template/refs/heads/main/assets/task_image_001.png'
 
 # Info URL: (Required) Will be displayed in desktop node
 infoUrl: 'https://www.koii.network/ocean'
@@ -72,11 +72,11 @@ requirementsTags:
 # Tags: You can select the tags here via https://www.koii.network/docs/develop/command-line-tool/create-task-cli/create-task#tags
 tags: [] 
 # Environment: (Required | TEST or PRODUCTION) Production mode will expose your task to all the task runners. 
-environment: "TEST"
+environment: "PRODUCTION  "
 
 #################################### BELOW IS FOR UPDATE TASK ONLY ####################################
 # Old Task ID: (ONLY for task update) 
-task_id: '38C4zorfzBDha6oPbDZPKnJkw3ZDBSF58BBe51o845qH'
+task_id: 'GAc8ntn3QfkoRfaHwHvKMWfkAn6zo854zkCGdTKevWdZ'
 
 # Migration Description: (ONLY for task update)
-migrationDescription: 'deploy updates'
+migrationDescription: 'deploy updates to production'
