@@ -7,7 +7,7 @@ export async function task(roundNumber) {
   try {
 
     // Grab the task_variables
-    let twitter_handle = process.env.TWITTER_HANDLE;
+    let twitter_handle = process.env.TWITTER_USERNAME;
     let pentagon_games_email = process.env.PENTAGON_GAMES_EMAIL;
     console.log("PENTAGON_GAMES_EMAIL" + pentagon_games_email);
     console.log("twitter_handle" + twitter_handle);
