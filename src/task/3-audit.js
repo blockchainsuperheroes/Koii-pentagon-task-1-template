@@ -30,7 +30,7 @@ try {
   return vote;
   } 
   catch (error) {
-  console.error("Error getting user info:", error);
+  console.error("Error getting Audit on:", error);
   return false;
   }
 }
