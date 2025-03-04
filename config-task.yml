@@ -35,16 +35,16 @@ submission_window: 40
 # submission_window: 2050
 
 # Minimum stake amount: (Required) The minimum amount of KOII that a user must stake in order to participate in the task.
-minimum_stake_amount: 1.9
+minimum_stake_amount: 2
 
 # Task Bounty Type: (Required | KOII or KPL) 
 task_type: 'KPL'
 
 # Token Mint Address: (ONLY task_type == KPL) kPEN Token as an example here. 
-token_type: "EkivtihnSTAMaT4YAz5FEe1RjZyCUXRUDVZPFrS4egkn"
+token_type: "DFquf3MLALQtQkxYN1WwR5PMZe96f3eaKiw25UB9uhpv"
 
 # Total bounty amount:  (Required) The total bounty amount that will be distributed to the task. (Not accepted in case of update task).
-total_bounty_amount: 10000
+total_bounty_amount: 30000
 
 # Bounty amount per round: (Required) Every round's maximum distribution, you can decide the logics in your task. 
 bounty_amount_per_round: 5
@@ -76,7 +76,7 @@ environment: "PRODUCTION"
 
 #################################### BELOW IS FOR UPDATE TASK ONLY ####################################
 # Old Task ID: (ONLY for task update) 
-task_id: '5MkXtEg1a9eaSiZzVAVo4iKkRhz5qbZoq6uQnyM8nedX'
+task_id: 'FhLhpo1jEDebbMYg9MhCZdUhowuaf43U1BqVFnGzxSWZ'
 
 # Migration Description: (ONLY for task update)
-migrationDescription: 'deploy updates to production'
+migrationDescription: 'Update token and crease bounty'
