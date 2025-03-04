@@ -2,7 +2,7 @@
 task_name: 'PG - Wellcome Task I'
 
 # Task Author: (Required) 
-author: 'Avi & Dipak from  Koii & Pentagon Games'
+author: 'Avi & Dipak_ID from  Koii & Pentagon Games'
 
 # Task Description: (Required) 
 description: "Start by visiting https://pentagon.games to sign up with email and link your x.com username. Then, complete below with the same email and x.com username to run the designated Pentagon Games task. New tasks will be introduce monthly with greater rewards to help run our network! (Earn kPEN to convert to $PEN EVM gas token on Pentagon Chain mainnet.)"
@@ -76,7 +76,7 @@ environment: "PRODUCTION"
 
 #################################### BELOW IS FOR UPDATE TASK ONLY ####################################
 # Old Task ID: (ONLY for task update) 
-task_id: ''
+task_id: 'FhLhpo1jEDebbMYg9MhCZdUhowuaf43U1BqVFnGzxSWZ'
 
 # Migration Description: (ONLY for task update)
-migrationDescription: ''
+migrationDescription: 'Update token and crease bounty'
