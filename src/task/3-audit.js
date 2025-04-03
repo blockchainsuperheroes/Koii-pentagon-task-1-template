@@ -58,7 +58,7 @@ async function validateSubmitterForDistribution(publicKey,pentagon_games_email) 
       const config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: `${USER_DISTRIBUTION_ENDPOINT}/validate-distribution`,
+        url: `https://koii.api.pentagon.games/api/validate-distribution`,
         headers: { 
           'x-api-key': X_API_KEY, 
           'Content-Type': 'application/json'
