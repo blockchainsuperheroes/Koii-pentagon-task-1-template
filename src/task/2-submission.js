@@ -1,4 +1,4 @@
-import { namespaceWrapper } from '@_koii/namespace-wrapper';
+import { namespaceWrapper } from '@_koii/task-manager/namespace-wrapper';
 
 export async function submission(roundNumber) {
   /**
@@ -6,13 +6,10 @@ export async function submission(roundNumber) {
    * Must return a string of max 512 bytes to be submitted on chain
    */
   try {
-    // Grab the queryResponse from NeDB
-    const queryResponse = await namespaceWrapper.storeGet('QUERY_RESPONSE');
-    console.log(`ROUND SUBMISSION LOOKS LIKE ${queryResponse}`);
-
-    // and return for submission
-    return queryResponse;
+    console.log(`MAKE SUBMISSION FOR ROUND ${roundNumber}`);
+    return await namespaceWrapper.storeGet(`${roundNumber}`) ?? '';
   } catch (error) {
     console.error('MAKE SUBMISSION ERROR:', error);
   }
 }
+
