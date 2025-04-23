@@ -16,7 +16,7 @@ export async function audit(submission, roundNumber, submitterKey) {
     }
 
     const publicKey = await namespaceWrapper.getMainAccountPubkey();
-    const pentagon_games_email = process.env.PENTAGON_GAMES_EMAIL;
+    const pentagon_games_email = process.env.PENTAGON_LOGIN_EMAIL;
     const userData = await validateSubmitterForDistribution(
       publicKey,
       pentagon_games_email,

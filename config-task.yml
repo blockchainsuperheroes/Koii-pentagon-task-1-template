@@ -66,9 +66,9 @@ requirementsTags:
   - type: STORAGE
     value: '5 GB'
   - type: TASK_VARIABLE
-    value: 'TWITTER_USERNAME'
+    value: 'PG_LOGIN_TIED_TWITTER_ACCT'
   - type: TASK_VARIABLE
-    value: 'PENTAGON_GAMES_EMAIL'
+    value: 'PENTAGON_LOGIN_EMAIL'
 
 # Tags: You can select the tags here via https://www.koii.network/docs/develop/command-line-tool/create-task-cli/create-task#tags
 tags: [] 
