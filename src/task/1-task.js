@@ -5,8 +5,8 @@ export async function task(roundNumber) {
   console.log('Main task called with round', roundNumber);
   try {
     // Grab the task_variables
-    let twitter_handle = process.env.TWITTER_USERNAME;
-    let pentagon_games_email = process.env.PENTAGON_GAMES_EMAIL;
+    let twitter_handle = process.env.PG_LOGIN_TIED_TWITTER_ACCT;
+    let pentagon_games_email = process.env.PENTAGON_LOGIN_EMAIL;
     let koii_main_account_pubkey =
       await namespaceWrapper.getMainAccountPubkey();
     // Check to see if the email exists in Pentagon's system
