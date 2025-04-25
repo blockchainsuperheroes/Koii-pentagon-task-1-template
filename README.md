@@ -1,68 +1,131 @@
-# Pentagon Games' Koii Task Template
+# Project Starter Template
 
-## Development Guide
+## 🚀 Project Overview
 
-First time writing a task? Start with the [Development Guide](https://github.com/koii-network/ezsandbox).
+This is a comprehensive project starter template designed to jumpstart development with best practices, modern tooling, and a robust project structure. Whether you're building a web application, microservice, or utility tool, this template provides a solid foundation that saves you time and enforces code quality.
 
-## Task Flow
+### 🌟 Key Features
+- 🧩 Modular and scalable project architecture
+- 🛡️ Pre-configured linting and code formatting
+- 🐳 Docker support for consistent development environments
+- 🧪 Integrated testing frameworks
+- 🔒 Environment configuration management
+- 📦 Dependency management with npm/yarn
+- 🚦 Continuous Integration (CI) readiness
 
-Tasks operate within a periodic structure known as 'rounds'. Each round consists of the following steps:
+## 📋 Getting Started
 
-1. **Perform the Task:** Execute the necessary actions for the round.
-2. **Audit Work:** Review the work completed by other nodes.
-3. **Rewards and Penalties:** Distribute rewards and apply penalties as necessary.
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v16.0.0 or higher)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- [Docker](https://www.docker.com/) (optional, for containerized development)
 
-For more detailed information about the task flow, refer to [the runtime flow documentation](https://docs.koii.network/concepts/what-are-tasks/what-are-tasks/gradual-consensus).
+### Installation
 
-Looking to bring better structure to your task? Explore our [Task Organizer](https://www.figma.com/community/file/1220194939977550205/Task-Outline) for better organization.
-
-## Tips
-
-- Always ensure your secret files, such as `.env` files, are secure! Implement a robust `.gitignore` strategy.
-- Continue innovating with Koii!
-
-Should you encounter any issues, don't hesitate to reach out by opening a ticket on [Discord](https://discord.gg/koii-network).
-
-## Environment Requirements
-
-- [Node >=16.0.0](https://nodejs.org)
-- [Docker Compose](https://docs.docker.com/get-started/08_using_compose/)
-
-## Tool Requirements
-
-- [Koii CLI Suite](https://docs.koii.network/develop/command-line-tool/koii-cli/install-cli)
-- [Create Task CLI](https://docs.koii.network/develop/command-line-tool/create-task-cli/install)
-
-## Available Scripts
-
-```sh
-npm test
+1. Clone the repository:
+```bash
+git clone https://github.com/your-org/project-starter.git
+cd project-starter
 ```
 
-Simulate rounds using unitTest.js.
-
-```sh
-npm jest-test
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
 ```
 
-Runs tests using Just.
-
-```sh
-npm run webpack
+3. Copy the environment example and customize:
+```bash
+cp .env.local.example .env
 ```
 
-Builds the project and generates the main script: `dist/main.js`.
-
-```sh
-npm run prod-debug
+4. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-Runs the live debugger (must have the task running in the desktop node).
+## 🛠 Customization Guide
 
-## Runtime Options
+### Configuration Files
+- `.eslintrc.js`: Modify ESLint rules
+- `.prettierrc`: Adjust code formatting preferences
+- `webpack.config.js`: Customize build process
+- `package.json`: Update project metadata and scripts
 
-There are two ways to run your task during development:
+### Environment Variables
+Configure your application behavior using `.env` file:
+- `PORT`: Application running port
+- `NODE_ENV`: Development, production, or testing environment
+- Other project-specific configurations
 
-1. With `GLOBAL_TIMERS="true"` (refer to `.env.local.example`) - When this option is enabled, IPC calls are made by calculating the average time slots of all tasks running on your node.
+## 📂 Project Structure
 
-2. With `GLOBAL_TIMERS="false"` - This option allows for manual calls to K2 and disables the automatic triggers for round management on K2. Transactions are only accepted during the correct time period. Instructions for manual calls can be found in [Manual K2 Calls](./Manual%20K2%20Calls.md).
+```
+project-starter/
+│
+├── src/                # Source code
+│   ├── index.js        # Entry point
+│   ├── task/           # Modular components
+│   └── utils/          # Utility functions
+│
+├── tests/              # Test suites
+├── config/             # Configuration files
+├── docs/               # Documentation
+├── scripts/            # Utility scripts
+└── dist/               # Compiled/bundled output
+```
+
+## 🔧 Technologies Used
+
+### Core
+- JavaScript/TypeScript
+- Node.js
+
+### Development Tools
+- ESLint
+- Prettier
+- Webpack
+- Jest/Testing Library
+- Nodemon
+
+### Optional Integrations
+- Docker
+- CI/CD Pipelines
+- Tailwind CSS
+- Express.js
+
+## 🚦 Use Cases
+
+This template is ideal for:
+- REST API development
+- Microservices
+- CLI tools
+- Backend services
+- Blockchain/Web3 projects
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+Please ensure your code adheres to the project's coding standards and includes appropriate tests.
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+- Open a GitHub Issue
+- Join our [Community Discord](https://discord.gg/your-community)
+
+---
+
+Made with ❤️ by [Your Organization/Name]
