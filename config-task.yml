@@ -24,16 +24,16 @@ task_executable_network: 'IPFS'
 task_audit_program: 'dist/main.js'
 
 # Round time: (Required) Duration of task, measured in slots (with each slot approximately equal to 408ms).
-round_time: 1500
-# round_time: 6000
+# round_time: 1500
+round_time: 6000
 
 # Audit window: (Required) The audit window should be greater than 1/3 of the round time.
-audit_window: 40
-# audit_window: 2050
+# audit_window: 40
+audit_window: 2050
 
 # Submission window: (Required) The submission window should be greater than 1/3 of the round time.
-submission_window: 40
-# submission_window: 2050
+# submission_window: 40
+submission_window: 2050
 
 # Minimum stake amount: (Required) The minimum amount of KOII that a user must stake in order to participate in the task.
 minimum_stake_amount: 2
@@ -77,7 +77,7 @@ environment: "PRODUCTION"
 
 #################################### BELOW IS FOR UPDATE TASK ONLY ####################################
 # Old Task ID: (ONLY for task update) 
-task_id: 'AQVQcEHAYMP57dvKWjEceNe28tPageJ5ZvckjqrXxk5R'
+task_id: '7KMnSS3dpXeRnjwnUmivr3SEfh5jXqtwzjHnqiyLasiQ'
 
 # Migration Description: (ONLY for task update)
 migrationDescription: 'Update discription and banner'
