@@ -24,7 +24,7 @@ task_executable_network: 'IPFS'
 task_audit_program: 'dist/main.js'
 
 # Round time: (Required) Duration of task, measured in slots (with each slot approximately equal to 408ms).
-round_time: 2000
+round_time: 2300
 
 # Audit window: (Required) The audit window should be greater than 1/3 of the round time.
 audit_window: 800
