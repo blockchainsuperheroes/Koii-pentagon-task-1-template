@@ -52,7 +52,7 @@ allowed_failed_distributions: 3
 
 # Space: (Required) Expected Task Data Size in MBs for the account size. 
 # Minimum: 1 for production, 0.1 for testing; Calculation Details: https://www.koii.network/docs/develop/command-line-tool/create-task-cli/create-task#space
-space: 0.1
+space: 1
 
 # Requirement Tags: (Optional): To add more global variables and task variables, please refer to the type, value, description format shown below.
 requirementsTags:
@@ -68,13 +68,13 @@ requirementsTags:
     value: 'PENTAGON_LOGIN_EMAIL'
 
 # Tags: You can select the tags here via https://www.koii.network/docs/develop/command-line-tool/create-task-cli/create-task#tags
-tags: [] 
+tags: []
 # Environment: (Required | TEST or PRODUCTION) Production mode will expose your task to all the task runners. 
 environment: "PRODUCTION"
 
 #################################### BELOW IS FOR UPDATE TASK ONLY ####################################
 # Old Task ID: (ONLY for task update) 
-task_id: '7KMnSS3dpXeRnjwnUmivr3SEfh5jXqtwzjHnqiyLasiQ'
+task_id: '3Xj9v9nGfETBPBZv5LTHWZ44zPXMG8t5PZwQ34EhpbAw'
 
 # Migration Description: (ONLY for task update)
 migrationDescription: 'Update discription and banner'
