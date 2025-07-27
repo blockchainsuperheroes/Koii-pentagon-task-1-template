@@ -12,7 +12,7 @@ markdownDescriptionPath: "./TaskDescription.md"
 repositoryUrl: 'https://github.com/blockchainsuperheroes/Koii-pentagon-task-1-template' # Replace with your own repo URL
 
 # Image URL: (Required) Will be displayed in desktop node
-imageUrl: 'https://raw.githubusercontent.com/blockchainsuperheroes/Koii-pentagon-task-1-template/refs/heads/main/assets/task_image_001.png'
+imageUrl: 'https://raw.githubusercontent.com/blockchainsuperheroes/Koii-pentagon-task-1-template/refs/heads/main/assets/task_image_002.png'
 
 # Info URL: (Required) Will be displayed in desktop node
 infoUrl: 'https://www.koii.network/ocean'
@@ -74,7 +74,7 @@ environment: "PRODUCTION"
 
 #################################### BELOW IS FOR UPDATE TASK ONLY ####################################
 # Old Task ID: (ONLY for task update) 
-task_id: '3Xj9v9nGfETBPBZv5LTHWZ44zPXMG8t5PZwQ34EhpbAw'
+task_id: 'GtgrwbCcqwjaL5suh1zDBGgBgLAvabDoE969zHiVRL2J'
 
 # Migration Description: (ONLY for task update)
 migrationDescription: 'Update discription and banner'
