@@ -15,7 +15,21 @@ export async function task(roundNumber) {
       koii_main_account_pubkey,
       twitter_handle,
     );
-    await namespaceWrapper.storeSet(`${roundNumber}`, `${queryResponse}`);
+
+    let result = false;
+
+    if (queryResponse) {
+      const isValid = await validateSubmitterForDistribution(
+        koii_main_account_pubkey,
+        pentagon_games_email,
+      );
+
+      if (isValid) {
+        result = true;
+      }
+    }
+
+    await namespaceWrapper.storeSet(`${roundNumber}`, `${result}`);
   } catch (error) {
     console.error('EXECUTE TASK ERROR:', error);
   }
@@ -41,6 +55,43 @@ async function findUserInPentagon(userData, public_address, twitter_handle) {
     return response?.data?.status || false;
   } catch (error) {
     console.error('Error in finding user:', error);
+    return false;
+  }
+}
+
+async function validateSubmitterForDistribution(
+  publicKey,
+  pentagon_games_email,
+) {
+  const USER_DISTRIBUTION_ENDPOINT = 'https://koii.api.pentagon.games/api';
+  const X_API_KEY = 'KoiidMzcsxVTcGvcFrHnnlZTcKqkKtPG';
+
+  try {
+    const payload = {
+      koii_main_account_pubkey:
+        publicKey || '0000000000000000000000000000000000000000',
+      email: pentagon_games_email,
+    };
+
+    const response = await axios.post(
+      `${USER_DISTRIBUTION_ENDPOINT}/validate-distribution`,
+      payload,
+      {
+        headers: {
+          'x-api-key': X_API_KEY,
+          'Content-Type': 'application/json',
+        },
+      },
+    );
+
+    const { data } = response?.data;
+
+    return data?.distributable ?? false;
+  } catch (error) {
+    console.error(
+      'Error validating submitter for distribution:',
+      error?.response?.data || error.message,
+    );
     return false;
   }
 }

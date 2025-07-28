@@ -74,7 +74,7 @@ environment: "PRODUCTION"
 
 #################################### BELOW IS FOR UPDATE TASK ONLY ####################################
 # Old Task ID: (ONLY for task update) 
-task_id: 'GtgrwbCcqwjaL5suh1zDBGgBgLAvabDoE969zHiVRL2J'
+task_id: '6xeKu4UZvqhkBpHbyQ6HsE1eq8ByuX3PA7w8rRz7GB3Y'
 
 # Migration Description: (ONLY for task update)
 migrationDescription: 'Update discription and banner'
