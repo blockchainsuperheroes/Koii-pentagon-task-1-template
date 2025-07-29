@@ -1,6 +1,3 @@
-import axios from 'axios';
-import { namespaceWrapper } from '@_koii/task-manager/namespace-wrapper';
-
 export async function audit(submission, roundNumber, submitterKey) {
   /**
    * Audit a submission
@@ -11,11 +8,7 @@ export async function audit(submission, roundNumber, submitterKey) {
     console.log(
       `AUDIT SUBMISSION FOR ROUND ${roundNumber} from ${submitterKey}`,
     );
-    if (!submission || submission === 'false') {
-      return false;
-    }
-
-    return true;
+    return submission === 'true';
   } catch (error) {
     console.error('Error getting Audit on:', error);
     return false;
