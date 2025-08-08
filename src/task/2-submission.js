@@ -7,9 +7,12 @@ export async function submission(roundNumber) {
    */
   try {
     console.log(`MAKE SUBMISSION FOR ROUND ${roundNumber}`);
-    return await namespaceWrapper.storeGet(`${roundNumber}`) ?? '';
+    const result = await namespaceWrapper.storeGet(`${roundNumber}`);
+
+    if (result === 'true') {
+      return result;
+    }
   } catch (error) {
     console.error('MAKE SUBMISSION ERROR:', error);
   }
 }
-
